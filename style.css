@@ -1,0 +1,739 @@
+:root {
+  --leftDivSizeOpen: 20%;
+  --divTopHeight: 3rem;
+  --border1: 1px solid #999999;
+  --border2: 1px solid #ffffff;
+  --border3: 1px solid #000000;
+  --backColor1: #404045;
+  --backColor2: #262630;
+  --backColor3: #181820;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 799px) {
+  html {
+    font-size: 14pt;
+  }
+
+  #divTop {
+    position: absolute;
+    width: 100%;
+    height: var(--divTopHeight);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top: var(--border1);
+    border-left: var(--border1);
+    border-right: var(--border1);
+    line-height: var(--divTopHeight);
+  }
+
+  #divContent {
+    position: absolute;
+    top: var(--divTopHeight);
+    display: block;
+    width: 100%;
+    height: calc(100% - var(--divTopHeight));
+    overflow: hidden;
+  }
+
+  #divLeft {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border: var(--border1);
+    overflow: auto;
+    z-index: 10;
+    background-color: #ffffff;
+  }
+
+  #divLeft p {
+    display: block;
+    width: 35rem;
+    padding-left: 0.5rem;
+  }
+
+  #divLeft p:hover {
+    text-decoration: underline;
+  }
+
+  #divLeft summary {
+    display: block;
+    width: 35rem;
+    cursor: pointer;
+    padding-left: 0.5rem;
+  }
+
+  #divLeft summary:hover {
+    text-decoration: underline;
+  }
+
+  a.Hyperlink:hover {
+    text-decoration: underline;
+  }
+
+  #divCenter {
+    display: block;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    border: var(--border1);
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 8;
+  }
+
+  #divRight {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    border: var(--border1);
+    overflow: auto;
+    z-index: 9;
+    background-color: #ffffff;
+  }
+
+  details>summary {
+    list-style: none;
+  }
+
+  summary::after {
+    font-size: 20px;
+    content: '\2261';
+    float: left;
+    width: 1rem;
+  }
+
+  details[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d15 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d15[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d16 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d16[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d17 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d17[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d21 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d21[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d22 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d22[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d24 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d24[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d25 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d25[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d26 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d26[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d27 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d27[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d28 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d28[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d31 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d31[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d32 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d32[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d45 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d45[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d51 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d51[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  .btMenu {
+    background-color: #eeeeee;
+    width: var(--divTopHeight);
+    height: calc(var(--divTopHeight) - 1px);
+    border: var(--border1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .btMenu::after {
+    font-size: 34px;
+    content: '\2261';
+  }
+
+  .btMenuOpen {
+    background-color: #ffffff;
+    border: var(--border2);
+  }
+
+  .btMenu:hover {
+    border: var(--border3);
+  }
+
+  .btMenu:disabled {
+    background-color: #999999;
+    border: 1px solid #999999;
+  }
+
+  .btLinks {
+    visibility: visible;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #eeeeee;
+    width: var(--divTopHeight);
+    height: calc(var(--divTopHeight) - 1px);
+    border: var(--border1);
+  }
+
+  .btLinks::after {
+    font-size: 34px;
+    content: '\2261';
+  }
+
+  .btLinksOpen {
+    background-color: #ffffff;
+    border: var(--border2);
+  }
+
+  .btLinks:hover {
+    border: var(--border3);
+  }
+
+  .btLinks:disabled {
+    background-color: #999999;
+    border: 1px solid #999999;
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .open {
+    width: 0%;
+  }
+
+  .close {
+    width: 100%;
+  }
+
+  .overflowHidden {
+    overflow: hidden;
+  }
+
+  .overflowAuto {
+    overflow: auto;
+  }
+
+  .overflowHidden {
+    overflow: hidden;
+  }
+
+  .overflowAuto {
+    overflow: auto;
+  }
+
+  .openDivLeft {
+    animation-duration: 0.5s;
+    animation-name: slideinDivLeft;
+    animation-iteration-count: 1;
+  }
+
+  .closeDivLeft {
+    animation-duration: 0.5s;
+    animation-name: slideoutDivLeft;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideinDivLeft {
+    0% {
+      width: 0px;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes slideoutDivLeft {
+    0% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0px;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 14pt;
+  }
+
+  #divTop {
+    position: absolute;
+    width: 100%;
+    height: var(--divTopHeight);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top: var(--border1);
+    border-left: var(--border1);
+    border-right: var(--border1);
+  }
+
+  #divContent {
+    position: absolute;
+    top: var(--divTopHeight);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - var(--divTopHeight));
+  }
+
+  #divLeft {
+    height: 100%;
+    border: var(--border1);
+    content-visibility: auto;
+  }
+
+  #divLeft p {
+    display: block;
+    width: 35rem;
+    padding-left: 0.5rem;
+  }
+
+  #divLeft p:hover {
+    text-decoration: underline;
+  }
+
+  #divLeft summary {
+    display: block;
+    width: 35rem;
+    cursor: pointer;
+    padding-left: 0.5rem;
+  }
+
+  #divLeft summary:hover {
+    text-decoration: underline;
+  }
+
+  a.Hyperlink:hover {
+    text-decoration: underline;
+  }
+
+  #divCenter {
+    height: 100%;
+    overflow: auto;
+    border: var(--border1);
+    padding: 1rem;
+    z-index: 9;
+  }
+
+  #divRight {
+    height: 100%;
+    border: var(--border1);
+    overflow: auto;
+    width: var(--leftDivSizeOpen);
+  }
+
+  details>summary {
+    list-style: none;
+  }
+
+  summary::after {
+    font-size: 20px;
+    content: '\2261';
+    float: left;
+    width: 1rem;
+  }
+
+  details[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d15 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d15[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d16 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d16[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d17 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d17[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+
+  #d21 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d21[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d22 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d22[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d24 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d24[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d25 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d25[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d26 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d26[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d27 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d27[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d28 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d28[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d31 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d31[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d32 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d32[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d45 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d45[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  #d51 summary::after {
+    content: '\2261';
+    font-size: 20px;
+  }
+
+  #d51[open] summary::after {
+    content: '\2234';
+    font-size: 20px;
+  }
+
+  .btMenu {
+    background-color: #eeeeee;
+    width: var(--divTopHeight);
+    height: calc(var(--divTopHeight) - 1px);
+    border: var(--border1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .btMenu::after {
+    font-size: 34px;
+    content: '\2261';
+  }
+
+  .btMenuOpen {
+    background-color: #ffffff;
+    border: var(--border2);
+  }
+
+  .btMenu:hover {
+    border: var(--border3);
+  }
+
+  .btMenu:disabled {
+    background-color: #999999;
+    border: 1px solid #999999;
+  }
+
+  .btLinks {
+    visibility: hidden;
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .open {
+    width: var(--leftDivSizeOpen);
+  }
+
+  .close {
+    width: 0px;
+  }
+
+  .overflowHidden {
+    overflow: hidden;
+  }
+
+  .overflowAuto {
+    overflow: auto;
+  }
+
+  .divCenterOpen {
+    width: calc(100% - var(--leftDivSizeOpen));
+  }
+
+  .divCenterClose {
+    width: calc(100% - var(--leftDivSizeOpen) - var(--leftDivSizeOpen));
+  }
+
+  .openDivLeft {
+    animation-duration: 0.5s;
+    animation-name: slideinDivLeft;
+    animation-iteration-count: 1;
+  }
+
+  .closeDivLeft {
+    animation-duration: 0.5s;
+    animation-name: slideoutDivLeft;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideinDivLeft {
+    0% {
+      width: 0px;
+    }
+
+    100% {
+      width: var(--leftDivSizeOpen);
+    }
+  }
+
+  @keyframes slideoutDivLeft {
+    0% {
+      width: var(--leftDivSizeOpen);
+    }
+
+    100% {
+      width: 0px;
+    }
+  }
+
+  .moveLeftDivCenter {
+    animation-duration: 0.5s;
+    animation-name: slideInDivCenter;
+    animation-iteration-count: 1;
+  }
+
+  .moveRightDivCenter {
+    animation-duration: 0.5s;
+    animation-name: slideOutDivCenter;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideInDivCenter {
+    0% {
+      width: calc(100% - var(--leftDivSizeOpen) - var(--leftDivSizeOpen));
+    }
+
+    100% {
+      width: calc(100% - var(--leftDivSizeOpen));
+    }
+  }
+
+  @keyframes slideOutDivCenter {
+    0% {
+      width: calc(100% - var(--leftDivSizeOpen));
+    }
+
+    100% {
+      width: calc(100% - var(--leftDivSizeOpen) - var(--leftDivSizeOpen));
+    }
+  }
+}
