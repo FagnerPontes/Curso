@@ -462,6 +462,12 @@
     width: var(--leftDivSizeOpen);
   }
 
+  #divRight p {
+    display: block;
+    width: 25vw;
+    text-decoration: none;
+  }
+
   details>summary {
     list-style: none;
   }
